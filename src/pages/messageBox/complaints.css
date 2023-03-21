@@ -1,0 +1,55 @@
+.complaintsBox {
+    height: 100vh;
+    padding-bottom: 31px;
+    width: calc(100% - 76px);
+}
+
+/* Start Testimonials */
+.complaintsBox h1 {
+    padding: 30px 0 0 0;
+    font-size: 3em;
+    font-weight: 500;
+    line-height: 1em;
+    text-align: center;
+    color: var(--main-color);
+}
+
+
+.complaintsBox .container .boxs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+
+}
+
+.complaintsBox .container .box {
+    background-color: var(--main-background);
+    color: #fff;
+    position: relative;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 7%);
+    text-align: right;
+
+}
+
+.complaintsBox .container .box img {
+    max-width: 100%;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: -3px;
+    border: 10px solid var(--booking-background);
+}
+
+.complaintsBox .container .box>p {
+    color: var(--Para-text);
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.complaintsBox .container .box>h3 {
+    font-size: 20px;
+}

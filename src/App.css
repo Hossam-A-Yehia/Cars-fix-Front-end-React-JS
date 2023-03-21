@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900;1000&display=swap');
+
+:root {
+    --main-color: #2196f3;
+    --booking-background: rgb(21 32 43 / 1);
+    --booking-sec-background: rgb(28 43 58);
+    --color-primary-variant: rgba(77, 181, 255, 0.4);
+    --main-transition: 0.5s;
+    --main-background: #2c2c6c;
+    --Para-text: rgba(225, 225, 250, 0.6);
+}
+
+::-webkit-scrollbar {
+    width: 1.1rem;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    overflow-x: hidden;
+    transition: var(--main-transition);
+    background-color: #1f1f38;
+    background-image: url(./components/imgs/bg-texture.png);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+p.spacialP {
+    text-align: center;
+    font-size: 22px;
+    padding: 0 calc(25vw - 200px);
+    position: relative;
+    padding-bottom: 30px;
+    margin-top: 0;
+    line-height: 40px;
+    color: var(--Para-text);
+    font-weight: 400;
+    letter-spacing: 0.01px;
+}
+
+h2 {
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+h3 {
+    font-size: 18px;
+    color: var(--main-color);
+}
+
+h5 {
+    color: var(--ctHeader-text);
+
+}
+
+
+.Toastify__close-button {
+    width: fit-content;
+}
+
+/*Start Animetions*/
+
+.main-title {
+    text-transform: uppercase;
+    position: relative;
+    margin: 0 auto 15px;
+    border: solid 1px var(--main-color);
+    padding: 10px 50px;
+    width: fit-content;
+    font-size: 40px;
+    z-index: 2;
+    color: var(--main-color);
+    transition: var(--main-transition) !important;
+}
+
+.main-title::before,
+.main-title::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: var(--main-color);
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    transform: translatey(-50%);
+}
+
+.main-title::before {
+    left: -30px;
+}
+
+
+.main-title::after {
+    right: -30px;
+}
+
+.main-title:hover::before {
+    animation: left-move 0.5s linear forwards;
+    z-index: -1;
+}
+
+.main-title:hover::after {
+    animation: right-move 0.5s linear forwards;
+    z-index: -1;
+}
+
+.main-title:hover {
+    color: white;
+    border-color: white;
+    transition-delay: 0.5s !important;
+}
+
+
+@keyframes left-move {
+    50% {
+        left: 0;
+        width: 12px;
+        height: 12px;
+    }
+
+    100% {
+        left: 0;
+        width: 50%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+@keyframes right-move {
+    50% {
+        right: 0;
+        width: 12px;
+        height: 12px;
+    }
+
+    100% {
+        right: 0;
+        width: 50%;
+        height: 100%;
+        border-radius: 0;
+    }
+}

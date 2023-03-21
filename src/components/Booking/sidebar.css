@@ -1,0 +1,206 @@
+.sidebar {
+    transition: var(--main-transition);
+    z-index: 555;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 260px;
+    background-color: #11101d;
+}
+
+.sidebar .logo {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.sidebar .logo i {
+    color: #fff;
+    font-size: 30px;
+    min-width: 78px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    transition: var(--main-transition);
+    margin: 0;
+
+}
+
+.sidebar .logo span {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+    transition: var(--main-transition);
+}
+
+.sidebar .nav-links {
+    overflow: auto;
+    height: 100%;
+    padding: 30px 0 150px 0;
+}
+
+.sidebar .nav-links::-webkit-scrollbar {
+    display: none;
+}
+
+.sidebar .nav-links li {
+    position: relative;
+    transition: var(--main-transition);
+}
+
+.sidebar .nav-links li.active {
+    background-color: var(--main-color);
+}
+
+.sidebar .nav-links li a {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .nav-links li a span.link-name {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    transition: var(--main-transition);
+}
+
+.sidebar .nav-links li i {
+    color: #fff;
+    min-width: 78px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    transition: var(--main-transition);
+    cursor: pointer;
+}
+
+.sidebar .nav-links li .icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.sidebar .nav-links li:hover {
+    background-color: var(--main-color);
+}
+
+.sidebar .profile-details {
+    position: fixed;
+    bottom: 0;
+    width: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #1d1b31;
+    padding: 12px 0;
+    transition: 0.2s;
+}
+
+.sidebar .profile-details .content {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .profile-details .content img {
+    width: 52px;
+    height: 52px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: 16px;
+    background-color: #1d1b31;
+    margin: 0 14px 0 12px;
+    transition: var(--main-transition);
+}
+
+
+.sidebar .profile-details .name-job .profile-name,
+.sidebar .profile-details .name-job .job {
+    white-space: nowrap;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.sidebar .profile-details .name-job .job {
+    font-size: 12px;
+}
+
+.sidebar.close {
+    width: 76px;
+}
+
+.sidebar.close .logo span {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar.close .nav-links {
+    overflow: visible;
+}
+
+.sidebar.close .nav-links li .icon-link {
+    display: block;
+}
+
+.sidebar.close .nav-links li a .link-name {
+    opacity: 1;
+    pointer-events: none;
+    display: none;
+}
+
+
+.sidebar.close .profile-details {
+    background: none;
+    width: 76px;
+}
+
+.sidebar.close .profile-details img {
+    padding: 7px;
+}
+
+.sidebar.close .profile-details i,
+.sidebar.close .profile-details .profile-name,
+.sidebar.close .profile-details .job {
+    display: none;
+}
+
+.home {
+    background-color: #E4E9F7;
+    position: relative;
+    left: 260px;
+    width: calc(100% - 260px);
+    height: 100vh;
+    transition: var(--main-transition);
+}
+
+.home .home-content {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.home .home-content .fa-bars,
+.home .home-content .text {
+    color: #11101d;
+    font-size: 35px;
+}
+
+.home .home-content .fa-bars {
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.home .home-content .text {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.home.show {
+    width: calc(100% - 76px);
+    left: 76px;
+}

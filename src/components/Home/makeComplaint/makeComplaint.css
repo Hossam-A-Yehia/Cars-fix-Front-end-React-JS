@@ -1,0 +1,11 @@
+.makeCopmlaint {
+    padding-top: 25px;
+    background-color: #00000075;
+    z-index: 10;
+    transition: var(--main-transition);
+}
+
+.makeCopmlaint .head {
+    background-color: var(--main-color);
+    color: #FAFAFA;
+}

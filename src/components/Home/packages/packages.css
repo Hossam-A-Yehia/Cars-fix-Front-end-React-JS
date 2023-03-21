@@ -1,0 +1,94 @@
+.packages {
+    padding: 100px 0;
+
+}
+
+.packages .container .boxs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.packages .container .boxs .box {
+    box-shadow: 0 8px 22px rgba(0, 0, 0, .1);
+    padding: 20px;
+    text-align: right;
+    transition: var(--main-transition);
+    background-color: var(--main-background);
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+
+.packages .container .boxs .box:hover {
+    background: transparent;
+    border-color: var(--color-primary-variant);
+    cursor: default;
+    transform: translateY(10px);
+}
+
+.packages .container .boxs .box img {
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+.packages .container .boxs .box .head {
+    padding: 15px 0;
+    border-bottom: solid 1px #ccc;
+}
+
+.packages .container .boxs .box .head h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--ctHeader-text);
+}
+
+.packages .container .boxs .box .head span {
+    text-align: center;
+    display: block;
+    margin: 10px 0;
+}
+
+.packages .container .boxs .box .head p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-color);
+    color: var(--main-backgroud);
+    margin: auto;
+    margin-top: 10px;
+    font-size: 30px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.packages .container .boxs .box .body {
+    margin-bottom: 20px px;
+    border-bottom: solid 1px #ccc;
+
+}
+
+.packages .container .boxs .box .body li {
+    margin: 17px 0;
+    color: var(--Para-text);
+}
+
+.packages .container .boxs .box .body li i {
+    color: var(--main-color);
+    margin-left: 5px;
+}
+
+.packages .container .boxs .box button {
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+
+.packages .container .boxs .box button:hover {
+    box-shadow: 0px 5px 20px var(--main-color);
+
+}

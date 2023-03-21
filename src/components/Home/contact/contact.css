@@ -1,0 +1,36 @@
+.contact {
+    padding: 100px 0;
+}
+
+
+.contact .container form input {
+    height: 60px;
+    background: transparent;
+    border: solid 2px rgba(77, 181, 255, 0.4);
+    font-family: inherit;
+}
+
+.contact .container form input::placeholder,
+.contact .container form textarea::placeholder {
+    transition: var(--main-transition);
+    color: var(--Para-text);
+}
+
+.contact .container form input:focus::placeholder,
+.contact .container form textarea:focus::placeholder {
+    opacity: 0;
+}
+
+
+
+.contact .container form textarea {
+    font-family: inherit;
+    height: 200px;
+    background: transparent;
+    border: solid 2px rgba(77, 181, 255, 0.4);
+}
+
+.contact .container form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+}

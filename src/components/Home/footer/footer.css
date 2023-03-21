@@ -1,0 +1,60 @@
+.new_footer_top {
+    padding: 0 0px 270px;
+    overflow-x: hidden;
+}
+
+.new_footer_top .footer_bg {
+    background: url("../../imgs/footer/footer_bg.png") no-repeat scroll center;
+    height: 266px;
+}
+
+.new_footer_top .footer_bg .footer_bg_one {
+    background: url("../../imgs/footer/volks.gif") no-repeat center center;
+    width: 330px;
+    height: 105px;
+    background-size: 100%;
+    left: 30%;
+    animation: myfirst 10s linear infinite;
+}
+
+.new_footer_top .footer_bg .footer_bg_three {
+    background: url("../../imgs/footer/volks.gif") no-repeat center center;
+    width: 330px;
+    height: 105px;
+    background-size: 100%;
+    transform: rotatey(180deg);
+    left: 30%;
+    animation: myTwo 5s linear infinite;
+}
+
+.new_footer_top .footer_bg .footer_bg_two {
+    background: url("../../imgs/footer/cyclist.gif") no-repeat center center;
+    width: 88px;
+    height: 100px;
+    background-size: 100%;
+    left: 38%;
+    animation: myfirst 15s linear infinite;
+}
+
+@keyframes myfirst {
+    0% {
+        left: -25%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+
+@keyframes myTwo {
+    0% {
+        right: -25%;
+    }
+
+    100% {
+        right: 100%;
+    }
+}
+
+/*************footer End*****************/

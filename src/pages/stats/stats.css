@@ -1,0 +1,25 @@
+.stats {
+  margin: 20px auto;
+  width: calc(100% - 76px);
+}
+
+.stats h1 {
+  padding: 0 0 30px 0;
+  font-size: 3em;
+  font-weight: 500;
+  line-height: 1em;
+  text-align: center;
+  margin: 20px 0;
+  color: var(--main-color);
+}
+
+.stats .col-md-5 {
+  background-color: var(--main-background);
+  border: 1px solid transparent;
+  transition: 0.3s;
+}
+
+.stats .col-md-5:hover {
+  border-color: var(--color-primary-variant);
+  background: transparent;
+}

@@ -1,0 +1,11 @@
+.makeComment {
+    padding-top: 25px;
+    background-color: #00000075;
+    z-index: 10;
+    transition: var(--main-transition);
+}
+
+.makeComment .head {
+    background-color: var(--main-color);
+    color: #FAFAFA;
+}
