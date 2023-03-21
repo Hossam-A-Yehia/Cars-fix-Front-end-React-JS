@@ -53,7 +53,7 @@ function Booking() {
                 damage: damage,
                 price: price,
             }
-            await axios.post("http://localhost:5000/api/booking", data)
+            await axios.post("https://backws.vercel.app/api/booking", data)
             toast.info(`تم تسجيل حجز جديد باسم ${username} `)
             e.target.reset()
         }

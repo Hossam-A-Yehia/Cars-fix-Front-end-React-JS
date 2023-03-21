@@ -21,7 +21,7 @@ function BookingInfo() {
 
     useEffect(() => {
         const fetchOneBooking = async () => {
-            const res = await axios.get(`http://localhost:5000/api/booking/${id}`)
+            const res = await axios.get(`https://backws.vercel.app/api/booking/${id}`)
             setData(res.data)
             setName(res.data.name)
             setPhone(res.data.phone)
@@ -51,7 +51,7 @@ function BookingInfo() {
             damage,
             price,
         }
-        await axios.put(`http://localhost:5000/api/booking/${id}`, data)
+        await axios.put(`https://backws.vercel.app/api/booking/${id}`, data)
         setUpdateMode(false)
     }
 

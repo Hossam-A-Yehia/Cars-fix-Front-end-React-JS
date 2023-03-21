@@ -13,15 +13,15 @@ function Stats() {
   useEffect(() => {
 
     const fetchBookings = async () => {
-      const res = await axios.get("http://localhost:5000/api/booking")
+      const res = await axios.get("https://backws.vercel.app/api/booking")
       setBookingsL(res.data.length)
     }
     const fetchComplaints = async () => {
-      const res = await axios.get("http://localhost:5000/api/complaint")
+      const res = await axios.get("https://backws.vercel.app/api/complaint")
       setComplL(res.data.length)
     }
     const fetchComment = async () => {
-      const res = await axios.get("http://localhost:5000/api/comment")
+      const res = await axios.get("https://backws.vercel.app/api/comment")
       setCommentL(res.data.length)
     }
     fetchComment()

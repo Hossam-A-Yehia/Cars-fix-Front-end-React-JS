@@ -17,7 +17,7 @@ function Complaints() {
             setRun(false)
         }, 1000);
         const fetchComplaints = async () => {
-            const res = await axios.get("http://localhost:5000/api/complaint")
+            const res = await axios.get("https://backws.vercel.app/api/complaint")
             setData(res.data)
         }
         fetchComplaints()
@@ -25,7 +25,7 @@ function Complaints() {
 
     const handleDelete = async (e) => {
         try {
-            await axios.delete(`http://localhost:5000/api/complaint`, {
+            await axios.delete(`https://backws.vercel.app/api/complaint`, {
                 data: { id: e._id }
             })
             toast.error(`تم حذف شكوي باسم ${e.name}`)

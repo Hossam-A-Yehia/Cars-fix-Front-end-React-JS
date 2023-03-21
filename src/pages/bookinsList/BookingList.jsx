@@ -16,7 +16,7 @@ function BookingList() {
             setRun(false)
         }, 1000);
         const fetchBookings = async () => {
-            const res = await axios.get("http://localhost:5000/api/booking")
+            const res = await axios.get("https://backws.vercel.app/api/booking")
             setData(res.data)
         }
         fetchBookings()
@@ -24,7 +24,7 @@ function BookingList() {
     // console.log(data.length);
     const handleDelete = async (e) => {
         try {
-            await axios.delete(`http://localhost:5000/api/booking`, {
+            await axios.delete(`https://backws.vercel.app/api/booking`, {
                 data: { id: e._id }
             })
             toast.error(`تم حذف حجز باسم ${e.name}`)

@@ -16,7 +16,7 @@ function Testimonials({ handleCommentTrue, reload }) {
 
     useEffect(() => {
         const fetchComment = async () => {
-            const res = await axios.get("http://localhost:5000/api/comment")
+            const res = await axios.get("https://backws.vercel.app/api/comment")
             setData(res.data)
         }
         fetchComment()

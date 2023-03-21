@@ -15,7 +15,7 @@ function MakeComment({ commentTrue, setCommentTrue, setReload, reload }) {
             title: massage.current.value
         }
         try {
-            axios.post("http://localhost:5000/api/comment", data)
+            axios.post("https://backws.vercel.app/api/comment", data)
             e.target.reset()
             toast.info(`تم اضافة تعليقك بنجاح شكرا لابداء رأيك`)
             setCommentTrue(false)
