@@ -22,16 +22,16 @@ function ContactUs() {
                 <form ref={form} className="row" onSubmit={sendEmail} data-aos="fade-up"
                     data-aos-anchor-placement="bottom-bottom">
                     <div className='col-md-6 my-2'>
-                        <input className='form-control w-100' type="text" name="name" id="name" placeholder="الأسم الكامل" />
+                        <input className='form-control w-100 text-white' type="text" name="name" id="name" placeholder="الأسم الكامل" />
                     </div>
                     <div className='col-md-6 my-2'>
-                        <input className='form-control w-100' type="email" name="email" placeholder="البريد الالكتروني" />
+                        <input className='form-control w-100 text-white' type="email" name="email" placeholder="البريد الالكتروني" />
                     </div>
                     <div className='col-md-12 my-2'>
-                        <input className='form-control w-100' type="text" name="subject" id="" placeholder="الموضوع" />
+                        <input className='form-control w-100 text-white' type="text" name="subject" id="" placeholder="الموضوع" />
                     </div>
                     <div className='col-md-12 my-2'>
-                        <textarea className='form-control w-100' name="message" placeholder="الرسالة"></textarea>
+                        <textarea className='form-control w-100 text-white' name="message" placeholder="الرسالة"></textarea>
                     </div>
                     <div className='col-md-12 my-2'>
                         <button className='btn btn-outline-primary' type='submit'>ارسال </button>
