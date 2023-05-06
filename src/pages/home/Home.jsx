@@ -7,7 +7,7 @@ import MakeComplaint from "../../components/Home/makeComplaint/MakeComplaint";
 import Navbar from "../../components/Home/navbar/Navbar";
 import Packages from "../../components/Home/packages/Packages";
 import Services from "../../components/Home/services/Services";
-import Credit from "../../components/Home/credit/Credit";
+import Credit from "../../components/Home/credit/Credit.jsx";
 import Testimonials from "../../components/Home/testimonials/Testimonials";
 import Topbar from "../../components/Home/topbar/Topbar";
 import Loader3 from "../loader/Loader3";
@@ -15,7 +15,7 @@ import Loader3 from "../loader/Loader3";
 function Home() {
   const [complaintTrue, setComplaintTrue] = useState(false);
   const [run, setRun] = useState(true);
-  const [buy, isBuy] = useState(false);
+  const [buy, setBuy] = useState(false);
 
   const handleComplaintTrue = () => {
     setComplaintTrue(true);
@@ -44,8 +44,8 @@ function Home() {
           />
           <AboutUs />
           <Services />
-          <Packages isBuy={isBuy} />
-          <Credit buy={buy} isBuy={isBuy} />
+          <Packages setBuy={setBuy} />
+          <Credit buy={buy} setBuy={setBuy} />
           <Testimonials />
           <ContactUs />
           <Footer />

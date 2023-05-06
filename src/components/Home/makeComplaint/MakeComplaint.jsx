@@ -26,7 +26,9 @@ function MakeComplaint({
     };
     try {
       await axios.post("https://backws.vercel.app/api/complaint", data);
-      toast.info(`تم اضافة تعليقك بنجاح شكرا لابداء ${userInfo.username}`);
+      toast.info(
+        `تم تقديم شكوي باسم ${userInfo.username} سيتم النظر فيها في اقرب وقت `
+      );
     } catch (err) {
       console.log(err);
       setErr(true);
