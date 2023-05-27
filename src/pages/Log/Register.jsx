@@ -84,7 +84,7 @@ function Login() {
               <span></span>
               <span></span>
               <span></span>
-              js
+              تسجيل
             </button>
             <Link to="/">
               <button className="btn">
