@@ -26,7 +26,7 @@ function BookingInfo() {
       setLoad(true);
       try {
         const res = await axios.get(
-          `https://backws.vercel.app/api/booking/${id}`
+          `https://cars-bac.vercel.app/api/booking/${id}`
         );
         setData(res.data);
         setName(res.data.name);
@@ -62,7 +62,7 @@ function BookingInfo() {
       damage,
       price,
     };
-    await axios.put(`https://backws.vercel.app/api/booking/${id}`, data);
+    await axios.put(`https://cars-bac.vercel.app/api/booking/${id}`, data);
     setUpdateMode(false);
   };
 

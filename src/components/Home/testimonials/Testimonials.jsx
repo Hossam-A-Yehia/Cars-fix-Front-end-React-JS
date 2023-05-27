@@ -23,7 +23,7 @@ function Testimonials() {
       setLoad(true);
       try {
         setLoad(false);
-        const res = await axios.get("https://backws.vercel.app/api/comment");
+        const res = await axios.get("https://cars-bac.vercel.app/api/comment");
         setData(res.data);
       } catch (err) {
         console.log(err);
@@ -41,7 +41,7 @@ function Testimonials() {
       img: userInfo.profilePic,
     };
     try {
-      await axios.post("https://backws.vercel.app/api/comment", data);
+      await axios.post("https://cars-bac.vercel.app/api/comment", data);
       toast.info(`تم اضافة تعليقك بنجاح شكرا لابداء ${userInfo.username}`);
       setComment("");
     } catch (err) {

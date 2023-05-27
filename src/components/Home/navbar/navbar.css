@@ -4,9 +4,9 @@
   padding: 10px;
   z-index: 2;
   right: 1rem;
-  top: 50%;
+  top: 54%;
   transform: translateY(-50%);
-  gap: 0.8rem;
+  gap: 10px;
   border-radius: 3rem;
   height: 66px;
   overflow-y: hidden;

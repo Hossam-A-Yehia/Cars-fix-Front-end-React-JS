@@ -7,8 +7,8 @@ import MakeComplaint from "../../components/Home/makeComplaint/MakeComplaint";
 import Navbar from "../../components/Home/navbar/Navbar";
 import Packages from "../../components/Home/packages/Packages";
 import Services from "../../components/Home/services/Services";
-import Credit from "../../components/Home/credit/Credit.jsx";
 import Testimonials from "../../components/Home/testimonials/Testimonials";
+import BestSeller from "../../components/Home/cardProduct/BestSeller";
 import Topbar from "../../components/Home/topbar/Topbar";
 import Loader3 from "../loader/Loader3";
 
@@ -29,11 +29,11 @@ function Home() {
 
   return (
     <>
+      <Topbar />
       {run ? (
         <Loader3 height="200px" width="200px" />
       ) : (
         <>
-          <Topbar />
           <Navbar handleComplaintTrue={handleComplaintTrue} />
           <Landing />
           <MakeComplaint
@@ -45,8 +45,8 @@ function Home() {
           <AboutUs />
           <Services />
           <Packages setBuy={setBuy} />
-          <Credit buy={buy} setBuy={setBuy} />
           <Testimonials />
+          <BestSeller title="جميع المنتجات" />
           <ContactUs />
           <Footer />
         </>

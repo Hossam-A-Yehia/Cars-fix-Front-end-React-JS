@@ -18,7 +18,7 @@ function Stats() {
     const fetchBookings = async () => {
       setLoad(true);
       try {
-        const res = await axios.get("https://backws.vercel.app/api/booking");
+        const res = await axios.get("https://cars-bac.vercel.app/api/booking");
         setBookingsL(res.data.length);
         setLoad(false);
       } catch (err) {
@@ -29,7 +29,9 @@ function Stats() {
     const fetchComplaints = async () => {
       setLoad2(true);
       try {
-        const res = await axios.get("https://backws.vercel.app/api/complaint");
+        const res = await axios.get(
+          "https://cars-bac.vercel.app/api/complaint"
+        );
         setComplL(res.data.length);
         setLoad2(false);
       } catch (err) {
@@ -41,7 +43,7 @@ function Stats() {
       setLoad3(true);
 
       try {
-        const res = await axios.get("https://backws.vercel.app/api/comment");
+        const res = await axios.get("https://cars-bac.vercel.app/api/comment");
         setCommentL(res.data.length);
         setLoad3(false);
       } catch (err) {

@@ -1,0 +1,44 @@
+.cart .titles h3 {
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.cart .titles,
+.cart-item {
+  display: grid;
+  grid-template-columns: 5fr 1fr 1fr 1fr;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+@media (max-width: 639px) {
+  .cart .titles {
+    display: none;
+  }
+  .cart .cart-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .cart .cart-item .pro {
+    flex-direction: column;
+    text-align: center;
+  }
+  .cart .cart-item .price::before {
+    content: "السعر  :";
+    margin: 0 5px;
+  }
+  .cart .cart-item .quantity::before {
+    content: "الكمية  :";
+    margin: 0 5px;
+  }
+  .cart .cart-item .total::before {
+    content: "المجموع  :";
+    margin: 0 5px;
+  }
+  .cart .checkout {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

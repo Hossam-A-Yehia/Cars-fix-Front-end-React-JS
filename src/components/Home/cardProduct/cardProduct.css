@@ -1,0 +1,37 @@
+.overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.568);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.overlay:hover::before {
+  opacity: 1;
+}
+.overlay:hover img {
+  transform: rotate(-20deg) scale(0.9);
+  transition: 0.5s;
+}
+.overlay img {
+  transition: 0.5s;
+}
+
+.product__icon {
+  transform: scale(1);
+  transition: 0.3s;
+}
+.product__icon:hover {
+  transform: scale(1.2);
+}
+.product__icons {
+  opacity: 0;
+  transition: 0.5s;
+}
+.overlay:hover .product__icons {
+  opacity: 1;
+}

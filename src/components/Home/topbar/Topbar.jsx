@@ -1,9 +1,11 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../../store/UsersSlice";
 import { Link } from "react-router-dom";
+import { BsFillCartCheckFill } from "react-icons/bs";
 
 function Topbar() {
   const dispatch = useDispatch();
+  const { quantity } = useSelector((state) => state.cart);
 
   const handleLogout = () => {
     dispatch(logout());
@@ -11,7 +13,17 @@ function Topbar() {
   };
 
   return (
-    <nav class="navbar navbar-expand-lg pos" style={{ minHeight: "50px" }}>
+    <nav
+      class="navbar navbar-expand-lg position-sticky"
+      style={{
+        minHeight: "60px",
+        background: "#1f1f38",
+        top: "0",
+        left: "0",
+        right: "0",
+        zIndex: "10000",
+      }}
+    >
       <div class="container d-flex align-items-center justify-content-between">
         <Link to="/" class="fw-bold fs-4 text-primary">
           ERROR^4O4
@@ -51,6 +63,52 @@ function Topbar() {
               </Link>
             </>
           )}
+          <Link
+            to="/cart"
+            className="navbar-brand d-flex align-items-center "
+            href="#"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#staticBackdrop"
+            aria-controls="staticBackdrop"
+          >
+            <div
+              className="rounded-circle d-flex justify-content-center align-items-center"
+              style={{
+                width: "3rem",
+                height: "3rem",
+                position: "relative",
+              }}
+            >
+              <BsFillCartCheckFill
+                style={{ fontSize: "30", color: "#2196f3" }}
+              />
+              <div
+                className="rounded-circle bg-danger d-flex justify-content-center align-items-center"
+                style={{
+                  position: "absolute",
+                  width: "20px",
+                  height: "20px",
+                  color: "white",
+                  top: "0",
+                  right: "0",
+                  transform: "translate(25%,25%)",
+                  fontSize: "15px",
+                }}
+              >
+                {quantity}
+              </div>
+            </div>
+            <span
+              className="fw-bold"
+              style={{
+                fontSize: "13px",
+                margin: "14px -10px 0",
+                color: "#fff",
+              }}
+            >
+              عربة التسوق
+            </span>
+          </Link>
         </div>
       </div>
     </nav>

@@ -23,7 +23,7 @@ function Login() {
     if (flag) {
       try {
         const res = await axios.post(
-          "https://backws.vercel.app/api/auth/register",
+          "https://cars-bac.vercel.app/api/auth/register",
           {
             username,
             email,
@@ -84,7 +84,7 @@ function Login() {
               <span></span>
               <span></span>
               <span></span>
-              دخول
+              js
             </button>
             <Link to="/">
               <button className="btn">

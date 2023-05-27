@@ -15,7 +15,9 @@ function Complaints() {
     const fetchComplaints = async () => {
       setLoad(true);
       try {
-        const res = await axios.get("https://backws.vercel.app/api/complaint");
+        const res = await axios.get(
+          "https://cars-bac.vercel.app/api/complaint"
+        );
         setData(res.data);
         setLoad(false);
       } catch (err) {
@@ -28,7 +30,7 @@ function Complaints() {
 
   const handleDelete = async (e) => {
     try {
-      await axios.delete(`https://backws.vercel.app/api/complaint`, {
+      await axios.delete(`https://cars-bac.vercel.app/api/complaint`, {
         data: { id: e._id },
       });
       toast.error(`تم حذف شكوي باسم ${e.name}`);

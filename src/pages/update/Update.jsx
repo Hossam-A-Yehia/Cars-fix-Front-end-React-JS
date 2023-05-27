@@ -49,7 +49,7 @@ function Update() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`https://backws.vercel.app/api/users/${id}`, {
+      await axios.put(`https://cars-bac.vercel.app/api/users/${id}`, {
         username,
         email,
         password,

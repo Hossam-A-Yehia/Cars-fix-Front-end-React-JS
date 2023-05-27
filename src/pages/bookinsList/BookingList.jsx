@@ -15,7 +15,7 @@ function BookingList() {
     const fetchBookings = async () => {
       setLoad(true);
       try {
-        const res = await axios.get("https://backws.vercel.app/api/booking");
+        const res = await axios.get("https://cars-bac.vercel.app/api/booking");
         setData(res.data);
         setLoad(false);
       } catch (err) {
@@ -28,7 +28,7 @@ function BookingList() {
 
   const handleDelete = async (e) => {
     try {
-      await axios.delete(`https://backws.vercel.app/api/booking`, {
+      await axios.delete(`https://cars-bac.vercel.app/api/booking`, {
         data: { id: e._id },
       });
       toast.error(`تم حذف حجز باسم ${e.name}`);

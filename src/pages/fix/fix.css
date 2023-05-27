@@ -1,0 +1,18 @@
+.fix label {
+  color: #fff;
+}
+
+.fix .col-12.\.btns {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.fix h1 {
+  padding: 20px 0;
+  font-size: 3em;
+  font-weight: 500;
+  line-height: 1em;
+  text-align: center;
+  color: #2196f3;
+}

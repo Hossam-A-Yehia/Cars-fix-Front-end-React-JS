@@ -4,6 +4,7 @@ import "./navbar.css";
 
 import { ImMenu } from "react-icons/im";
 import { VscEyeClosed } from "react-icons/vsc";
+import { HiTemplate } from "react-icons/hi";
 
 import { AiOutlineHome } from "react-icons/ai";
 import { FaCarCrash } from "react-icons/fa";
@@ -22,7 +23,7 @@ function Navbar({ handleComplaintTrue }) {
     <div
       className="bar d-flex flex-column position-fixed"
       style={
-        toggleNav ? { height: "540px", overflow: "unset" } : { height: "66px" }
+        toggleNav ? { height: "570px", overflow: "unset" } : { height: "66px" }
       }
     >
       <a
@@ -73,6 +74,14 @@ function Navbar({ handleComplaintTrue }) {
         <span>قالوا عنا</span>
       </a>
       <a
+        href="#products"
+        onClick={() => setActiveNav("#products")}
+        className={activeNav === "#products" ? "active" : ""}
+      >
+        <HiTemplate />
+        <span> منتجات</span>
+      </a>
+      <a
         href="#contactus"
         onClick={() => setActiveNav("#contactus")}
         className={activeNav === "#contactus" ? "active" : ""}
@@ -84,10 +93,10 @@ function Navbar({ handleComplaintTrue }) {
         <MdReportProblem />
         <span> شكوي</span>
       </a>
-        <Link to="/stats">
-          <GoSignIn />
-          <span>الدخول</span>
-        </Link>
+      <Link to="/stats">
+        <GoSignIn />
+        <span>الدخول</span>
+      </Link>
     </div>
   );
 }

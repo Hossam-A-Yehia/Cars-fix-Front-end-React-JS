@@ -19,15 +19,13 @@ import BookingInfo from "./pages/bookingInfo/BookingInfo";
 import Complaints from "./pages/messageBox/Complaints";
 import Stats from "./pages/stats/Stats";
 import Update from "./pages/update/Update";
+import SingleProduct from "./pages/singelProduct/SingleProduct";
+import Cart from "./pages/cart/Cart";
+import AllProducts from "./pages/products/AllProducts";
+import Fix from "./pages/fix/Fix";
 
 function App() {
   useEffect(() => {
-    if (localStorage.getItem("color")) {
-      document.documentElement.style.setProperty(
-        "--main-color",
-        localStorage.getItem("color")
-      );
-    }
     AOS.init({ duration: 1000 });
   }, []);
 
@@ -35,7 +33,7 @@ function App() {
     <>
       <BrowserRouter>
         <ToastContainer
-          position="top-right"
+          position="bottom-left"
           theme="colored"
           pauseOnHover={false}
         />
@@ -50,6 +48,10 @@ function App() {
           <Route path="/teamWork" element={<TeamWork />} />
           <Route path="/update/:id" element={<Update />} />
           <Route path="/bookingList/:id" element={<BookingInfo />} />
+          <Route path="/products/:id" element={<SingleProduct />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/products" element={<AllProducts />} />
+          <Route path="/fix" element={<Fix />} />
         </Routes>
       </BrowserRouter>
     </>
