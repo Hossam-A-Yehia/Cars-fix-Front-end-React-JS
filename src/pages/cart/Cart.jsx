@@ -1,15 +1,38 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Container } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
-
+import axios from "axios";
 import { HiArrowNarrowLeft } from "react-icons/hi";
 import "./cart.css";
 import { clearItems, removeItem } from "../../store/CartSlice";
 import Topbar from "../../components/Home/topbar/Topbar";
+import StripeCheckout from "react-stripe-checkout";
 
 function Cart() {
   const { cartProducts, total } = useSelector((state) => state.cart);
+  const KEY =
+    "pk_test_51MsOd0KF1DyiYwQfSVRT1EmEMyHjKJqVvplfO1S5oto6000Rkcdnb7CEKWOG8TJlvHg2epBdS3vEIBeHPmcy2HdZ00ihLP9EbK";
+  const navigate = useNavigate();
 
+  const payNow = async (token) => {
+    try {
+      const res = await axios({
+        url: "https://e-commerce-back-end-psi.vercel.app/api/checkout/payment",
+        method: "post",
+        data: {
+          amount: cartProducts.price * 100,
+          token,
+        },
+      });
+      if (res.status === 200) {
+        navigate("/success", {
+          state: { products: cartProducts },
+        });
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
   const dispatch = useDispatch();
 
   const discount = 0.75;
@@ -109,9 +132,24 @@ function Cart() {
                     </div>
                   </div>
                   {userAccount ? (
-                    <button className="w-100 my-2 btn btn-success">
-                      تأكيد الدفع
-                    </button>
+                    <StripeCheckout
+                      name="Auto Fix"
+                      image="https://res.cloudinary.com/dimy2zhcs/image/upload/v1685355991/Screenshot_37_ehwdsn.png"
+                      label="Pay Now"
+                      billingAddress
+                      shippingAddress
+                      description={`المبلغ المطلوب دفعه هو ${
+                        total * discount
+                      } جنيه`}
+                      amount={total * discount * 100}
+                      token={payNow}
+                      stripeKey={KEY}
+                    >
+                      <button className="w-100 my-2 btn btn-success">
+                        تأكيد الدفع
+                      </button>
+                      ;
+                    </StripeCheckout>
                   ) : (
                     <Link to="/login" className="btn btn-warning">
                       يجب تسجيل الدخول اولا

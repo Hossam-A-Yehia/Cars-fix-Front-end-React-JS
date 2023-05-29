@@ -25,8 +25,21 @@ function Topbar() {
       }}
     >
       <div class="container d-flex align-items-center justify-content-between">
-        <Link to="/" class="fw-bold fs-4 text-primary">
-          ERROR^4O4
+        <Link
+          to="/"
+          class="fw-bold fs-4 text-primary d-flex align-items-center gap-2"
+        >
+          <img
+            src="https://res.cloudinary.com/dimy2zhcs/image/upload/v1685355991/Screenshot_37_ehwdsn.png"
+            alt=""
+            style={{
+              width: "40px",
+              height: "40px",
+              borderRadius: "50%",
+              cursor: "pointer",
+            }}
+          />
+          AUTO FIX
         </Link>
         <div className="d-flex align-items-center justify-content-center m-0 ">
           {JSON.parse(localStorage.getItem("userCars")) ? (

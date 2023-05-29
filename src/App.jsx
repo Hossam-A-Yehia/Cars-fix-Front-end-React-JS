@@ -23,6 +23,7 @@ import SingleProduct from "./pages/singelProduct/SingleProduct";
 import Cart from "./pages/cart/Cart";
 import AllProducts from "./pages/products/AllProducts";
 import Fix from "./pages/fix/Fix";
+import Success from "./pages/success/Success";
 
 function App() {
   useEffect(() => {
@@ -52,6 +53,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/products" element={<AllProducts />} />
           <Route path="/fix" element={<Fix />} />
+          <Route path="/success" element={<Success />} />
         </Routes>
       </BrowserRouter>
     </>
