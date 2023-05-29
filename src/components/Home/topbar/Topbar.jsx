@@ -45,7 +45,7 @@ function Topbar() {
           {JSON.parse(localStorage.getItem("userCars")) ? (
             <>
               <Link
-                to={`update/${
+                to={`/update/${
                   JSON.parse(localStorage.getItem("userCars"))._id
                 }`}
               >
@@ -69,7 +69,7 @@ function Topbar() {
             </>
           ) : (
             <>
-              <Link to="login">
+              <Link to="/login">
                 <button className="btn btn-outline-primary me-2">
                   تسجيل دخول
                 </button>
